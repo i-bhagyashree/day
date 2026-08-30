@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday Krishna</title>
+    <meta
+      name="description"
+      content="A beautiful birthday website for Krishna with warm wishes and aesthetic design."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="floating-heart heart-1">♥</div>
+    <div class="floating-heart heart-2">♥</div>
+    <div class="floating-heart heart-3">♥</div>
+    <div class="floating-heart heart-4">♥</div>
+    <div class="floating-star star-1">✨</div>
+    <div class="floating-star star-2">✨</div>
+    
+    <div class="bg-blur orb orb-one"></div>
+    <div class="bg-blur orb orb-two"></div>
+    <div class="bg-blur orb orb-three"></div>
+
+    <header class="hero">
+      <nav class="top-bar">
+        <span class="brand">🎂</span>
+        <span class="brand-small">✨</span>
+      </nav>
+
+      <div class="hero-content">
+        <div class="birthday-badge">🎉 Happy Birthday! 🎉</div>
+        <p class="eyebrow">A little sparkle, a lot of love kanu</p>
+        <h1>Happy Birthday</h1>
+        <h2>Krishna</h2>
+        <p class="subtitle">
+          May your year be filled with joy, peace, laughter, and the kind of
+          dreams that turn into beautiful memories.
+        </p>
+
+        <div class="cta-row">
+          <button id="surpriseBtn">Open Surprise</button>
+        </div>
+      </div>
+    </header>
+
+    <main id="birthdayReveal" class="container reveal-panel">
+      <section class="glass intro-card">
+        <span class="mini-tag">For You</span>
+        <h3>To the one who makes life brighter</h3>
+        <p>
+          Every day with you feels like a beautiful chapter full of warmth,
+          laughter, and kindness. You deserve endless smiles, sweet blessings,
+          and all the happiness the universe has to offer.
+        </p>
+      </section>
+
+      <section class="wish-grid">
+        <article class="glass wish-card">
+          <div class="icon">✨</div>
+          <h4>Joy</h4>
+          <p>May your heart always be full of laughter and light.</p>
+        </article>
+
+        <article class="glass wish-card">
+          <div class="icon">🌼</div>
+          <h4>Peace</h4>
+          <p>May calm, love, and positivity follow you every day.</p>
+        </article>
+
+        <article class="glass wish-card">
+          <div class="icon">💫</div>
+          <h4>Dreams</h4>
+          <p>May every goal you chase turn into a beautiful reality.</p>
+        </article>
+      </section>
+
+      <section class="photo-gallery-section glass">
+        <div class="section-header">
+          <span class="mini-tag">✨ Moments</span>
+          <h3>Beautiful memories</h3>
+          <p class="section-subtitle">some of the beautiful memories</p>
+        </div>
+
+        <div id="galleryGrid" class="gallery-grid"></div>
+      </section>
+
+      <section class="quote-section glass">
+        <div class="quote-icon">💝</div>
+        <p class="quote-text">"Every moment with you is a treasure, today is your day to shine brighter than ever before."</p>
+        <div class="quote-decoration"></div>
+      </section>
+
+      <section id="surpriseMessage" class="glass hidden-message surprise-card message-wrapper">
+        <div class="message-container">
+          <div class="message-header">
+            <div class="surprise-icon">💌</div>
+            <span class="mini-tag"></span>
+            <p class="message-hint"></p>
+          </div>
+          <button id="revealMessageBtn" class="reveal-btn"></button>
+        </div>
+        <div id="messageContent" class="message-content hidden-content">
+          <p>
+            Dear Krishna, today is your day to feel extra special. May this new
+            year bring you endless moments of love, achievements, and beautiful
+            surprises. Never stop being yourself because your presence makes the
+            world a better place. Happy Birthday, and may every wish you make come
+            true.
+          </p>
+        </div>
+      </section>
+
+       <section class="birthday-wishes glass">
+        <h3>Your Birthday Blessings</h3>
+        <div class="wishes-container">
+          <div class="wish-item">🌸 Health & Happiness</div>
+          <div class="wish-item">🎯 Success & Achievement</div>
+          <div class="wish-item">💖 Love & Laughter</div>
+          <div class="wish-item">🌟 Endless Blessings</div>
+          <div class="wish-item">🎨 Creativity & Growth</div>
+          <div class="wish-item">🌈 Beautiful Moments</div>
+        </div>
+      </section> 
+
+      <section class="special-button-section glass">
+        <button id="secretMessageToggle" class="secret-toggle-btn">🔒 Unlock Secret Message</button>
+      </section>
+
+      <section id="surpriseMessage" class="glass surprise-card message-wrapper secret-message-hidden">
+        <div class="message-container">
+          <div class="message-header">
+            <div class="surprise-icon">💌</div>
+            <span class="mini-tag">Secret Message</span>
+          </div>
+        </div>
+        <div id="messageContent" class="message-content">
+          <p>
+            Dear Krishna, today is your day to feel extra special. May this 
+            year bring you endless moments of love, achievements, and beautiful
+            surprises. Never stop being yourself because your presence makes the
+            world a better place. Happy Birthday, and may every wish you make come
+            true.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <div id="imageModal" class="image-modal" aria-hidden="true">
+      <div class="modal-backdrop" data-close="true"></div>
+      <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <button class="modal-close" aria-label="Close image">×</button>
+        <img id="modalImage" src="" alt="Expanded birthday memory" />
+        <div class="modal-caption">
+          <span class="mini-tag">Memory</span>
+          <h4 id="modalTitle">memory</h4>
+        </div>
+      </div>
+    </div>
+
+    <div id="birthdayPopup" class="birthday-popup">
+      <div class="popup-content">
+        <div class="popup-header">
+          <span class="close-popup">&times;</span>
+        </div>
+        <div class="popup-body">
+          <div class="popup-icon">🎂</div>
+          <h2>Make a Wish!</h2>
+          <p>Close your eyes and make a special wish, then click below!</p>
+          <button id="wishBtn" class="wish-btn">🌟 Click for Magic! ✨</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="celebrationModal" class="celebration-modal">
+      <div class="celebration-content">
+        <button class="celebration-close">&times;</button>
+        <div class="celebration-body">
+          <div class="celebration-text">
+            <h2>🎉 Happy Birthday! 🎉</h2>
+            <p id="celebrationMessage">You deserve all the happiness in the world!</p>
+          </div>
+          <div class="balloons-container">
+            <div class="balloon balloon-pink"></div>
+            <div class="balloon balloon-purple"></div>
+            <div class="balloon balloon-gold"></div>
+            <div class="balloon balloon-red"></div>
+            <div class="balloon balloon-blue"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <canvas id="confetti"></canvas>
+
+    <footer class="footer">
+      <p>Made with 💕 by Bhagyashree for Krishna's Special Day</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
